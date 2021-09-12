@@ -5,7 +5,7 @@ const path = require("path");
 const scanEnv = (
   envFile = ".env",
   exampleEnv = ".env.example",
-  ignoreEnv = ".envignore"
+  ignoreEnv = null
 ) => {
   // load envFile
   dotenv.config({ path: path.resolve(envFile) });
@@ -14,9 +14,12 @@ const scanEnv = (
   let buf = Buffer.from(fs.readFileSync(path.resolve(exampleEnv), "utf-8"));
   const config = dotenv.parse(buf); // will return an object
 
-  // read and parse ignore env file
-  buf = Buffer.from(fs.readFileSync(path.resolve(ignoreEnv), "utf-8"));
-  const ignoreConfig = dotenv.parse(buf); // will return an object
+  let ignoreConfig;
+  if (ignoreEnv) {
+    // read and parse ignore env file
+    buf = Buffer.from(fs.readFileSync(path.resolve(ignoreEnv), "utf-8"));
+    ignoreConfig = dotenv.parse(buf); // will return an object
+  }
 
   const missingEnvs = [];
 
