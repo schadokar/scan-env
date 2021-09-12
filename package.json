@@ -1,0 +1,32 @@
+{
+  "name": "scan-env",
+  "version": "1.0.0",
+  "description": "Scan the required environment variables in the project.",
+  "main": "index.js",
+  "keywords": [
+    "scan-env",
+    "environment",
+    "variables",
+    "config",
+    "settings",
+    "dotenv",
+    "env",
+    ".env"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "homepage": "https://github.com/schadokar/scan-env",
+  "author": "Shubham Chadokar <hello@schadokar.dev> (schadokar.dev)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schadokar/scan-env.git"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.1.1"
+  }
+}
