@@ -5,6 +5,8 @@ from `.env.example` and scan those in `.env`. It uses `dotenv` in background to 
 
 It returns a boolean.
 
+[npm package link](https://www.npmjs.com/package/scan-env)
+
 ## Install
 
 ```
